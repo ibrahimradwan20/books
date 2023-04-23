@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div id="particles-js"></div>
+
+    <div class="content">
+        <img class="tilt" src="images/7.png" alt="">
+        <h3> Ibrahim <span>Radwan</span> </h3>
+        <p> i am a <span class="typing-text">Full stack developer </span> </p>
+        <a href="#about" class="btn">about me</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> about <span>me</span> </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img class="tilt" src="images/2.JPG" alt="">
+        </div>
+
+        <div class="content">
+            <h3> my name is <span> Ibrahim Radwan </span> </h3>
+            <p class="info">I Am Good At Designing Front-End Websites, And I Am Good At Dealing With Programming Languages Such As HTML, CSS, JavaScript And The Bootsrat Framework.
+                I Am Good At Designing Back-End Websites, And I Am Good At Dealing With Programming Languages Such As PHP, MySQL And Python..</p>
+            <div class="box-container">
+                <div class="box">
+                    <p> <span> age: </span> 20 </p>
+                    <p> <span> gender: </span> male </p>
+                    <p> <span> experience  : </span> 3 years </p>
+                    <p> <span> freelance : </span> available </p>
+                </div>
+                <div class="box">
+                    <p> <span> language : </span> arabic / english </p>
+                    <p> <span> phone : </span> +972594079549 </p>
+                    <p> <span> email : </span> ibrahimradwan909@gmail.com </p>
+                    <p> <span> address : </span> Palestine - North-Gaza </p>
+                </div>
+            </div>
+            <a href="http://localhost/cv/insert.php" class="btn">Insert Books</a>
+            <a href="http://localhost/cv/show.php" class="btn">Show Books</a>
+            <a href="http://localhost/cv/select.php" class="btn">Select Books</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- javascript part  -->
+
+<!-- typed.js link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+<!-- particles.js links  -->
+<script src="js/particles.min.js"></script>
+<script src="js/app.js"></script>
+
+<!-- vanilla-tilt.js link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+<script>
+
+let menu = document.querySelector('#menu-bars');
+let header = document.querySelector('header');
+
+menu.onclick = () =>{
+    menu.classList.toggle('fa-times');
+    header.classList.toggle('active');
+}
+
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    header.classList.remove('active');
+};
+
+var typed = new Typed('.typing-text', {
+    strings : ['front end developer', 'web designer', 'web developer'],
+    loop : true,
+    typeSpeed : 150
+});
+
+VanillaTilt.init(document.querySelectorAll('.tilt'),{
+    max:25
+});
+
+</script>
+
+</body>
+</html>
